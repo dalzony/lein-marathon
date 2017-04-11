@@ -1,7 +1,6 @@
 # lein-marathon
 
-Generate json config file for marathon framework from (luminus friendly) config.edn
-
+`lein-marathon` enables it to convert the config file(config.edn) of Luminus-framework to Marathon-framework style one (JSON mode).
 
 ## Usage
 
@@ -19,8 +18,8 @@ $ lein marathon dev
 $ lein marathon prod
 ```
 
-It depends on project.clj of Luminus framework.
-Maybe your project.clj looks ...
+If you make an app with Luminus web framework, a config file is generated at a specific directory.    
+For example, in you project.clj, you may find a profile information added as below:
 
 ```clojure
 :profiles
@@ -40,8 +39,7 @@ Maybe your project.clj looks ...
 - `dev` is from `resource-paths` of `:project/dev`.
 - `prod` is from `resource-paths` of `:uberjar`.
 
-So you can change your config path in project.clj.
-
+You just may change your config path in the project.clj.
 
 ### Result
 
@@ -62,12 +60,16 @@ to `.marathon_config_prod`
 
 You can just copy & paste to your marathon framework configuration on JSON mode.
 
-![marathon-sample](https://cloud.githubusercontent.com/assets/562341/24896456/fda71474-1ecf-11e7-9fb9-eea239889e67.png "marathon sample")
+![marathon-sample](https://cloud.githubusercontent.com/assets/562341/24897745/0d71c0e8-1ed5-11e7-94a9-131832e8db2b.png "marathon sample")
 
 
-## Plan
+## *Note
 
-I will add new feature that you can add custom config path to json config file.
+- This version only works on Luminus framework. So your project must be written in  Luminus style. A framework-independent version would be updated soon.
+
+- Any feature you want is welcome!
+  - Plz Report on issue
+- PR is also welcome 🤗
 
 ## Reference
 
