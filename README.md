@@ -70,7 +70,7 @@ You can just copy & paste to your marathon framework configuration on JSON mode.
 - This version only works on Luminus framework. So your project must be written in  Luminus style. A framework-independent version would be updated soon.
 
 - Any feature you want is welcome!
-  - Plz Report on issue
+  - Plz Report on [issues].
 - PR is also welcome 🤗
 
 ## Reference
@@ -85,3 +85,4 @@ Distributed under the Eclipse Public License either version 1.0 or (at
 your option) any later version.
 
 [lein-var-file]: https://github.com/orend/lein-var-file
+[issues]: https://github.com/dalzony/lein-marathon/issues
