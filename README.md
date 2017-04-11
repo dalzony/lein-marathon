@@ -5,6 +5,20 @@ Generate json config file for marathon framework from (luminus friendly) config.
 
 ## Usage
 
+Add lein-marathon to your plugin list in your project.clj:
+
+```clojure
+:plugins [[lein-marathon "0.1.0"]
+```
+
+Available commands:
+
+```sh
+$ lein marathon # default dev
+$ lein marathon dev
+$ lein marathon prod
+```
+
 It depends on project.clj of Luminus framework.
 Maybe your project.clj looks ...
 
@@ -23,31 +37,26 @@ Maybe your project.clj looks ...
 
 ```
 
-Add lein-marathon to your plugin list in your project.clj:
-
-```clojure
-:plugins [[lein-marathon "0.1.0"]
-```
-
-Available commands:
-
-```sh
-$ lein marathon # default dev
-$ lein marathon dev
-$ lein marathon prod
-```
-
 - `dev` is from `resource-paths` of `:project/dev`.
 - `prod` is from `resource-paths` of `:uberjar`.
 
 So you can change your config path in project.clj.
 
+
 ### Result
 
 It generated to `.marathon_config_dev` or `.marathon_config_prod`.
 
+from `env/prod/resources/config.edn`
+
+```clojure
+{:production true
+ :port 3000}
 ```
-$ cat .marathon_config_prod
+
+to `.marathon_config_prod`
+
+```json
 {"PRODUCTION":true,"PORT":3000}
 ```
 
