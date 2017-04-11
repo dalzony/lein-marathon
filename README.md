@@ -1,5 +1,7 @@
 # lein-marathon
 
+[![Clojars Project](https://img.shields.io/clojars/v/lein-marathon.svg)](https://clojars.org/lein-marathon)
+
 `lein-marathon` enables it to convert the config file(config.edn) of Luminus-framework to Marathon-framework style one (JSON mode).
 
 ## Usage
