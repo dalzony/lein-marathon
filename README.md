@@ -23,7 +23,13 @@ Maybe your project.clj looks ...
 
 ```
 
-You can just use `lein marathon` command like this.
+Add lein-marathon to your plugin list in your project.clj:
+
+```clojure
+:plugins [[lein-marathon "0.1.0"]
+```
+
+Available commands:
 
 ```sh
 $ lein marathon # default dev
@@ -36,7 +42,7 @@ $ lein marathon prod
 
 So you can change your config path in project.clj.
 
-## result
+### Result
 
 It generated to `.marathon_config_dev` or `.marathon_config_prod`.
 
