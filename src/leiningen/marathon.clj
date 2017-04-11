@@ -32,7 +32,7 @@
   [project & args]
   (println "creating....")
   (let [phase (or (first args) "dev")
-        filename (str "marathon_config" "_" phase)
+        filename (str ".marathon_config" "_" phase)
         config (load-config project phase)]
     (spit (io/file (:root project) filename)
       (map-to-json-uppercase config))
