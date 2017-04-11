@@ -28,7 +28,7 @@
   (load-file (str (:root project) "/" (get-path project phase) "/config.edn")))
 
 (defn marathon
-  "Make marathon config"
+  "Genrate marathon JSON mode style config"
   [project & args]
   (println "creating....")
   (let [phase (or (first args) "dev")
